@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './css/App.css'
+import WindwoFiles from './modules/window_files'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      хуй залупа член жопа влгалище пердалище 
+      <WindwoFiles/>
     </>
   )
 }

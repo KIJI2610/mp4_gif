@@ -1,0 +1,121 @@
+.main-window-files-container{
+    width: 600px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.255);
+    border-radius: 10px;
+}
+.header-window-files{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(150, 143, 255);
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    box-shadow: 0 4px 15px -1px rgba(0, 0, 0, 0.255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.format{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    /* background-color: red; */
+    font-size: 14pt;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-sizing: border-box;
+}
+
+.btn-arrow-img{
+    position: relative;
+    width: 40px;
+    background-color: rgb(150, 143, 255);
+}
+.format-type{
+    font-weight: 600;
+    color: white;
+    user-select: none;
+    cursor: default;
+}
+.unload-container{
+    width: 100%;
+    height: 350px;
+    /* background-color: blue;
+    opacity: 0.2; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.add-file{
+    background-color: white;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.255);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(150, 143, 255);
+    font-weight: 600;
+    transition: color 100ms, background-color 300ms;
+}
+.add-file:hover{
+    background-color: rgb(150, 143, 255);
+    color: white;
+}
+.add-file-strong{
+    font-size: 12pt;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 5px;
+}
+.file-imp{
+    display: none;
+}
+.push-file{
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+    user-select: none;
+    cursor: default;
+    font-size: 16pt;
+    transition: 300ms;
+    background-color: rgb(110, 170, 255);
+    margin: auto;
+}
+.push-file:hover{
+    color: rgb(110, 170, 255);
+    background-color: white;
+}
+.none-display{
+    display: none;
+}
+.push-file-container{
+    margin: auto;
+    width: 70%;
+    /* background-color: red; */
+    width: 100%;
+}
+.data-file{
+    display: grid;
+    padding: 0px;
+    margin-top: 10px;
+    font-weight: 600;
+    /* background-color: green; */
+    justify-items: start;
+}
+/* .file-info{
+    margin-left: 20px;
+    margin-right: 20px;
+} */
