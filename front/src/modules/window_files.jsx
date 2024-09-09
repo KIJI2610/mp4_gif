@@ -1,6 +1,8 @@
 import { useRef, useEffect, useState } from 'react'
 import './../css/WindowFiles.css'
 import arrow from './../assets/right-arrow.png'
+import axios from 'axios'
+
 function WindwoFiles(){
     const ADD_BTN = useRef(null);
     const ADD_INP = useRef(null);
@@ -8,6 +10,7 @@ function WindwoFiles(){
     const [name_file, set_name_file] = useState('');
     const [size_file, set_size_file] = useState('');
     const [fileSelected, setFileSelected] = useState(false);
+
 
     useEffect(() => {
         if (PUSH_FILE_CONTAINER.current) {
@@ -44,13 +47,25 @@ function WindwoFiles(){
         return `${truncatedBaseName}.${extension}`;
     }
 
+    let file = null
+
     function ChangeFile(event) {
         ADD_BTN.current.classList.add('none-display')
-        const file = event.target.files[0];
+        file = event.target.files[0];
         console.log(file);
         set_name_file(truncateFileName(file.name));
         set_size_file(formatFileSize(file.size));
         setFileSelected(true);
+    }
+
+    function PushData(){
+        axios.post('http://localhost:8080/upload', file, {headers:{'Content-Type':'application/json'}})
+            .then(response => {
+                console.log(`response: ${response.data}`)
+            })
+            .catch(error => {
+                console.error(`Server error: ${error}`)
+            })
     }
 
     return(
@@ -63,11 +78,11 @@ function WindwoFiles(){
                 </div>
             </div>
             <div className='unload-container'>
-                <button onClick={AddFile} ref={ADD_BTN} className='add-file'>add File <strong className='add-file-strong'>+</strong></button>
+                <button onClick={AddFile} ref={ADD_BTN} className='add-file'>Add File <strong className='add-file-strong'>+</strong></button>
                 <input onChange={ChangeFile} ref={ADD_INP} className='file-imp' type="file" id="fileInput" accept="video/mp4" />
                 
                 <div ref={PUSH_FILE_CONTAINER} className="push-file-container">
-                    <div className="push-file">
+                    <div onClick={PushData} className="push-file">
                         <p className='conver-btn-text'>Convert to gif</p>
                     </div>
                     <div className="data-file">

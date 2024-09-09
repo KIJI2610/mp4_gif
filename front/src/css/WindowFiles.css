@@ -60,16 +60,17 @@
     padding-left: 10px;
     padding-right: 10px;
     color: rgb(150, 143, 255);
-    font-weight: 600;
+    font-weight: 200;
     transition: color 100ms, background-color 300ms;
+    font-size: 24pt;
 }
 .add-file:hover{
     background-color: rgb(150, 143, 255);
     color: white;
+
 }
 .add-file-strong{
-    font-size: 12pt;
-    font-weight: 800;
+    font-size: 24pt;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 5px;
 }
@@ -115,7 +116,6 @@
     /* background-color: green; */
     justify-items: start;
 }
-/* .file-info{
-    margin-left: 20px;
-    margin-right: 20px;
-} */
+.file-info{
+    color: rgb(105, 118, 255);
+}
